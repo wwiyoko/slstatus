@@ -1,11 +1,12 @@
-const unsigned int interval = 5000;
+const unsigned int interval = 1000;
 static const char unknown_str[] = "n/a";
 
 #define MAXLEN 2048
 
 static const struct arg args[] = {
+	{ run_command, "[%s] ", "slstatus-player" },
 	{ cpu_perc, "[cpu %s%] ", NULL },
 	{ ram_perc, "[ram %s%] ", NULL },
 	{ battery_perc, "[bat %s%] ", "BAT0" },
-	{ datetime, "[%s]", "%F %H:%M" },
+	{ datetime, "[%s]", "%F %T" },
 };
